@@ -1,0 +1,10 @@
+{
+  "/": "pages/index.js",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/_error": "pages/_error.js",
+  "/interactive": "pages/interactive.js",
+  "/music": "pages/music.js",
+  "/robotic_fish": "pages/robotic_fish.js",
+  "/symbiosiso": "pages/symbiosiso.js"
+}
