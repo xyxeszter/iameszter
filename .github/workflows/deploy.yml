@@ -27,6 +27,9 @@ jobs:
       - name: Build Next.js site
         run: npm run build  # No need for `export` anymore
 
+      - name: Preserve CNAME File
+        run: echo "iameszter.com" > ./out/CNAME
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
