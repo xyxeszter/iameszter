@@ -1,0 +1,14 @@
+{
+  "/_document": "pages/_document.js",
+  "/_error": "pages/_error.js",
+  "/_app": "pages/_app.js",
+  "/": "pages/index.html",
+  "/bio": "pages/bio.html",
+  "/heatit": "pages/heatit.html",
+  "/symbiosiso": "pages/symbiosiso.html",
+  "/interactive": "pages/interactive.html",
+  "/music": "pages/music.html",
+  "/robotic_fish": "pages/robotic_fish.html",
+  "/template": "pages/template.html",
+  "/404": "pages/404.html"
+}
