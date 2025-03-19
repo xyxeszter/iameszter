@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <div className="flex flex-col items-center justify-center text-black text-center">
       <nav className="p-8 flex flex-wrap justify-center gap-x-8 gap-y-4 max-w-6xl px-4">
@@ -16,4 +16,6 @@ export default function Footer() {
       </nav>
     </div>
   );
-} 
+};
+
+export default Footer; 

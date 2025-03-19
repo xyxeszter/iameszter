@@ -1,13 +1,8 @@
-import React from "react";
-import Link from "next/link";
 import Footer from "../components/Footer";
-import { Space_Grotesk } from 'next/font/google';
-
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background-light text-black text-center">
+    <div className="min-h-screen bg-background-light text-black text-center font-space-grotesk">
       <Footer />
 
       <div className="flex flex-col items-center justify-center py-32">
@@ -25,9 +20,9 @@ export default function Home() {
           </video>
         </div>
         <h1 className="text-5xl font-bold mb">
-          <span className={`text-black ${spaceGrotesk.className}`}>Eszter Ozsvald</span>
+          <span className="text-black">Eszter Ozsvald</span>
         </h1>
-        <p className={`text-xl text-black mb-12 ${spaceGrotesk.className}`}>
+        <p className="text-xl text-black mb-12">
         Tech, motion, and nutrition. From the unexpected future ∞
         </p>
       </div>
