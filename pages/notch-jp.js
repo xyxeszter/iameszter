@@ -1,12 +1,51 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import { Space_Grotesk } from 'next/font/google';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] });
 
 export default function NotchJP() {
+  const [formStatus, setFormStatus] = useState('');
+  const recaptchaRef = useRef(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setFormStatus('sending');
+
+    try {
+      const recaptchaValue = recaptchaRef.current.getValue();
+      
+      const response = await fetch("https://formspree.io/f/xrbpeqdn", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: e.target.email.value,
+          message: e.target.message.value,
+          'g-recaptcha-response': recaptchaValue,
+          _subject: "New Notch JP Contact Form Submission",
+        }),
+      });
+
+      if (response.ok) {
+        setFormStatus('success');
+        e.target.reset();
+        recaptchaRef.current.reset();
+      } else {
+        const data = await response.json();
+        console.error('Form submission error:', data);
+        setFormStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setFormStatus('error');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background-light text-black">
       <Footer />
@@ -101,9 +140,74 @@ export default function NotchJP() {
                 <p>
                   Notchについて詳しくはこちら: <a href="https://wearnotch.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">wearnotch.com</a>
                 </p>
-                <p>
-                  ご興味がありましたら、ぜひご連絡ください！ → <Link href="/contact" className="text-accent hover:underline">iameszter.com/contact</Link>
+              </div>
+
+              <div className="space-y-6 mt-12">
+                <h2 className={`text-2xl font-bold text-accent ${spaceGrotesk.className}`}>お問い合わせ</h2>
+                <p className="text-lg">
+                  Notchやモーショントラッキング技術についてのご質問やコラボレーションのご相談がございましたら、お気軽にご連絡ください。
                 </p>
+
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-6 mt-8"
+                >
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="block text-sm font-medium">
+                      メールアドレス:
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      required
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="block text-sm font-medium">
+                      メッセージ:
+                    </label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      required
+                      rows={6}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                    />
+                  </div>
+
+                  <div className="flex justify-center">
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                      theme="light"
+                      onErrored={() => console.error('reCAPTCHA error:', process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY)}
+                    />
+                  </div>
+
+                  <div className="flex justify-center">
+                    <button
+                      type="submit"
+                      disabled={formStatus === 'sending'}
+                      className="px-6 py-2 bg-accent text-white rounded-md hover:bg-accent-dark transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {formStatus === 'sending' ? '送信中...' : '送信'}
+                    </button>
+                  </div>
+
+                  {formStatus === 'success' && (
+                    <p className="text-green-600 text-center">
+                      メッセージを送信しました。ご連絡ありがとうございます。
+                    </p>
+                  )}
+                  {formStatus === 'error' && (
+                    <p className="text-red-600 text-center">
+                      申し訳ありません。メッセージの送信に失敗しました。もう一度お試しください。
+                    </p>
+                  )}
+                </form>
               </div>
             </div>
           </div>
