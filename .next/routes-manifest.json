@@ -2,27 +2,22 @@
   "version": 3,
   "pages404": true,
   "caseSensitive": false,
-  "basePath": "",
+  "basePath": "/iameszter",
   "redirects": [
     {
-      "source": "/:file((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+)/",
-      "destination": "/:file",
+      "source": "/iameszter/",
+      "destination": "/iameszter",
+      "basePath": false,
       "internal": true,
-      "missing": [
-        {
-          "type": "header",
-          "key": "x-nextjs-data"
-        }
-      ],
       "statusCode": 308,
-      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+))/$"
+      "regex": "^/iameszter/$"
     },
     {
-      "source": "/:notfile((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+)",
-      "destination": "/:notfile/",
+      "source": "/:path+/",
+      "destination": "/:path+",
       "internal": true,
       "statusCode": 308,
-      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+))$"
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
     }
   ],
   "headers": [],
@@ -35,10 +30,10 @@
       "namedRegex": "^/(?:/)?$"
     },
     {
-      "page": "/bio",
-      "regex": "^/bio(?:/)?$",
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
       "routeKeys": {},
-      "namedRegex": "^/bio(?:/)?$"
+      "namedRegex": "^/about(?:/)?$"
     },
     {
       "page": "/heatit",
@@ -94,5 +89,15 @@
     "pathHeader": "x-nextjs-rewritten-path",
     "queryHeader": "x-nextjs-rewritten-query"
   },
-  "rewrites": []
+  "rewrites": {
+    "beforeFiles": [
+      {
+        "source": "/iameszter//_next/:path+",
+        "destination": "/iameszter/_next/:path+",
+        "regex": "^/iameszter//_next(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))(?:/)?$"
+      }
+    ],
+    "afterFiles": [],
+    "fallback": []
+  }
 }

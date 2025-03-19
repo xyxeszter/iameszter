@@ -1,14 +1,14 @@
 {
-  "/_document": "pages/_document.js",
   "/_app": "pages/_app.js",
-  "/bio": "pages/bio.html",
+  "/_document": "pages/_document.js",
+  "/about": "pages/about.html",
   "/heatit": "pages/heatit.html",
-  "/_error": "pages/_error.js",
   "/": "pages/index.html",
+  "/music": "pages/music.html",
   "/interactive": "pages/interactive.html",
   "/robotic_fish": "pages/robotic_fish.html",
-  "/music": "pages/music.html",
   "/symbiosiso": "pages/symbiosiso.html",
   "/template": "pages/template.html",
+  "/_error": "pages/_error.js",
   "/404": "pages/404.html"
 }

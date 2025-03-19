@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://iameszter.com
+
+# Sitemaps
+Sitemap: https://iameszter.com/sitemap.xml

@@ -12,9 +12,9 @@
     },
     "distDir": ".next",
     "cleanDistDir": true,
-    "assetPrefix": "https://xyxeszter.github.io/iameszter/",
+    "assetPrefix": "/iameszter/",
     "cacheMaxMemorySize": 52428800,
-    "configOrigin": "next.config.ts",
+    "configOrigin": "next.config.js",
     "useFileSystemPublicRoutes": true,
     "generateEtags": true,
     "pageExtensions": [
@@ -46,7 +46,7 @@
         256,
         384
       ],
-      "path": "/_next/image/",
+      "path": "/iameszter/_next/image",
       "loader": "default",
       "loaderFile": "",
       "domains": [],
@@ -58,13 +58,7 @@
       "dangerouslyAllowSVG": false,
       "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
       "contentDispositionType": "attachment",
-      "remotePatterns": [
-        {
-          "hostname": "xyxeszter.github.io",
-          "protocol": "https",
-          "port": ""
-        }
-      ],
+      "remotePatterns": [],
       "unoptimized": true
     },
     "devIndicators": {
@@ -75,11 +69,11 @@
       "pagesBufferLength": 5
     },
     "amp": {
-      "canonicalBase": ""
+      "canonicalBase": "/iameszter"
     },
-    "basePath": "",
+    "basePath": "/iameszter",
     "sassOptions": {},
-    "trailingSlash": true,
+    "trailingSlash": false,
     "i18n": null,
     "productionBrowserSourceMaps": false,
     "excludeDefaultMomentLocales": true,
@@ -286,7 +280,7 @@
     },
     "htmlLimitedBots": "Mediapartners-Google|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview",
     "bundlePagesRouterDependencies": false,
-    "configFileName": "next.config.ts"
+    "configFileName": "next.config.js"
   },
   "appDir": "/Users/seastar/Documents/Website/iameszter",
   "relativeAppDir": "",
