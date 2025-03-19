@@ -28,6 +28,12 @@
       "namedRegex": "^/about(?:/)?$"
     },
     {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
       "page": "/heatit",
       "regex": "^/heatit(?:/)?$",
       "routeKeys": {},
@@ -44,6 +50,12 @@
       "regex": "^/music(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/music(?:/)?$"
+    },
+    {
+      "page": "/notch-jp",
+      "regex": "^/notch\\-jp(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/notch\\-jp(?:/)?$"
     },
     {
       "page": "/robotic_fish",

@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Eszter Ozsvald | Tech, Motion, & Nutrition</title>
         <meta name="description" content="Entrepreneur, product designer, and engineer working on AI, wearables, movement tracking, and future food innovations." />
-        <meta name="keywords" content="AI, wearables, movement, biomechanics, sports technology, nutrition, future food, robotics, smart textiles" />
+        <meta name="keywords" content="Eszter Ozsvald, AI wearables, motion tracking, biomechanics, sports tech, Notch, product design, entrepreneur, Japan, 日本, 日本のテクノロジー, Tokyo startup" />
         <meta name="author" content="Eszter Ozsvald" />
         <meta property="og:title" content="Eszter Ozsvald | Tech, Motion, & Nutrition" />
         <meta property="og:description" content="Exploring AI, wearables, biomechanics, and future food innovations." />

@@ -13,7 +13,7 @@ const Footer = () => {
         <Link href="/interactive" className="text-lg text-accent hover:underline whitespace-nowrap">Interactive</Link>
         <Link href="/music" className="text-lg text-accent hover:underline whitespace-nowrap">Music</Link>
         <Link href="https://wearnotch.com" className="text-lg text-accent hover:underline whitespace-nowrap">Notch Motion Sensors</Link>
-        <Link href="https://www.linkedin.com/in/eszterozsvald/" className="text-lg text-accent hover:underline whitespace-nowrap">Contact Me</Link>
+        <Link href="/contact" className="text-lg text-accent hover:underline whitespace-nowrap">Contact Me</Link>
       </nav>
     </div>
   );
