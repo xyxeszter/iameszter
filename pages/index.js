@@ -12,19 +12,22 @@ export default function Home() {
             loop 
             muted 
             playsInline
-            className="w-full  pointer-events-none"
+            className="w-full pointer-events-none"
           >
             <source src="/videos/eszter_with_birds.mov" type="video/quicktime" />
             <source src="/videos/eszter_with_birds.mov" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
-        <h1 className="text-5xl font-bold mb">
+        <h1 className="text-5xl font-bold mb-8">
           <span className="text-black">Eszter Ozsvald</span>
         </h1>
-        <p className="text-xl text-black mb-12">
-        Tech, motion, and nutrition. From the unexpected future ∞
-        </p>
+        <div className="max-w-2xl mx-auto space-y-2">
+          <p className="text-xl text-black leading-relaxed">
+            AI wearables, motion tracking, and biomechanics—building the future of sports tech and human performance.
+            As an entrepreneur and product designer, I work at the intersection of innovation, technology, and movement, leading projects like Notch, reactive textiles, and robotic motion tracking.
+          </p>
+        </div>
       </div>
     </div>
   );

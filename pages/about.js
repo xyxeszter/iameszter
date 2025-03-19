@@ -30,7 +30,11 @@ export default function Bio() {
 
               <div className="space-y-4 text-m leading-relaxed text-gray-700">
                 <p>
-                  Hello! I'm Eszter, an entrepreneur, designer, and engineer exploring the intersection of technology, human movement, and interactive design.
+                I’m Eszter Ozsvald, an entrepreneur and product designer working at the intersection of  
+  AI wearables, biomechanics, and motion tracking. As the founder of Notch, I’ve developed  
+  next-generation motion sensors that redefine performance analysis for athletes, sports tech,  
+  and human movement research. My background in **robotics, biomechanics, and product innovation**  
+  drives my passion for pushing the boundaries of **wearable technology and interactive design**.
                 </p>
 
                 <p>
